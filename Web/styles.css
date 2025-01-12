@@ -1,0 +1,491 @@
+/* Basic styling */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+    padding-top: 60px; /* Added to prevent content overlap with fixed header */
+}
+
+/* Header styling */
+header {
+    background: #000;
+    padding: 1rem 0;
+    border-bottom: 2px solid #333;
+    position: fixed; /* Fixes the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the entire width of the viewport */
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0.5rem;
+}
+
+header nav ul li a:hover {
+    color: #1e90ff;
+    transform: translateY(-2px);
+}
+
+/* Email styling */
+.contact-email {
+    position: fixed;
+    bottom: 0;
+    left: 1rem; /* Indentation from the left edge */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.contact-email a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section styling */
+#hero {
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 2px solid #333;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 3s ease-in;
+    font-family: serif;
+
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: serif;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1e90ff;
+    
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    border-color: #00BFFF;
+    background-color: transparent;
+
+    transform: translateY(-2px);
+    
+}
+
+/* Section styling */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem 0;
+    border-left: 5px solid #1e90ff; /* Stylish left border */
+    padding-left: 1rem;
+    position: relative;
+}
+
+.section-title::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 30px;
+    background: #1e90ff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-content {
+    padding-left: 1rem;
+    border-left: 2px solid #333; /* Stylish division line */
+    margin-left: 2rem;
+}
+
+/* About Section styling */
+#about {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+    text-align: left;
+}
+#about:hover {
+    transform: scale(1.00);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.band-photo {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.band-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+.about-text {
+    max-width: 800px;
+text-align: center;
+
+}
+
+/* Music Section styling */
+#music {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+}
+#music:hover {
+    transform: scale(1.00);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+}
+
+.music-gallery {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.music-item {
+    background: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 280px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.music-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+.cover-art {
+    width: 100%;
+    border-radius: 5px;
+    transition: opacity 0.2s;
+}
+
+.cover-art:hover {
+    opacity: 0.85;
+}
+
+.spotify-link {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-spotify {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1db954;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-spotify:hover {
+    background-color: #1aa34b;
+    transform: translateY(-2px);
+}
+
+/* Events Section styling */
+#events {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+}
+#events :hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.events-list:hover {
+    transform: scale(1.00);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+
+
+.event-item {
+    background: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.event-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.event-item h3:hover {
+    color: #1e90ff;
+}
+
+.event-item p {
+    margin: 0.5rem 0;
+}
+
+/* Contact Section styling */
+
+#contact {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+}
+#contact :hover {
+    background-color: #1a1a1a;
+    transform: translateY(-3px);
+}
+
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #1e90ff;
+    text-decoration: none;
+
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-media li a:hover {
+    color: #1e90ff;
+}
+
+/* Footer styling */
+footer {
+    background: #000;
+    padding: 1rem 0;
+    border-top: 2px solid #333;
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .about-content .band-photo {
+        margin-bottom: 1rem;
+    }
+
+    .music-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+#hero {
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    height: 40vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* White text for readability */
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+    z-index: 0;
+}
+
+#hero h2, #hero p, #hero .btn-primary {
+    position: relative;
+    z-index: 1; /* Ensures text appears above the overlay */
+}
+/* Header */
+header {
+    background: #000; /* Solid black background */
+    color: #fff; /* White text */
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions */
+}
+
+/* Header Hover Effect */
+header:hover {
+    background: #f5f5dc; /* Light cream background */
+    color: #000; /* Black text for contrast */
+}
+
+/* Header Container */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: inherit; /* Matches the current text color */
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit; /* Matches the current text color */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth color change for hover */
+}
+
+header nav ul li a:hover {
+    color: #1e90ff; /* Blue highlight on hover for links */
+}
+header:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow on hover */
+    border-bottom: 2px solid #1e90ff; /* Blue bottom border */
+}
+header nav ul li a:hover {
+    color: #ff4500; /* Change link color to orange on hover */
+}
